@@ -1,5 +1,7 @@
 # timer-vue
 
+Display an arbitrary number of timers, counting up.
+
 ## Project setup
 ```
 npm install
