@@ -1,5 +1,5 @@
 <template lang="html">
-	<div class="timer">
+	<div :class="timerClass">
 		<div class="row">
 			<input type="text" placeholder="Title" />
 		</div>
@@ -24,6 +24,9 @@ export default {
 		startTime: null
 	}),
 	computed: {
+		timerClass() {
+			return "timer " + (this.isRunning ? 'running' : 'paused')
+		},
 		displayTime() {
 			let x = Math.floor(this.seconds + this.prevSeconds);
 			let s = x % 60;
@@ -75,6 +78,14 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.running {
+	background-color: #C9F7FF;
+}
+.paused {
+	background-color: #DEEBED;
+}
+
+
 .timer .close {
 	position: absolute;
 	top: 0px;
