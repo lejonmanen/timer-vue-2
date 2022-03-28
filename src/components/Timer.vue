@@ -1,7 +1,7 @@
 <template lang="html">
 	<div :class="timerClass">
 		<div class="row">
-			<input type="text" placeholder="Title" />
+			<input type="text" placeholder="Timer name" />
 		</div>
 		<div class="row time"> {{displayTime}} </div>
 		<div class="row">
